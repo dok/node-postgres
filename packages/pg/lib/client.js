@@ -358,27 +358,27 @@ class Client extends EventEmitter {
 
   _handleRowDescription(msg) {
     // delegate rowDescription to active query
-    this.activeQuery.handleRowDescription(msg)
+    this.activeQuery?.handleRowDescription(msg)
   }
 
   _handleDataRow(msg) {
     // delegate dataRow to active query
-    this.activeQuery.handleDataRow(msg)
+    this.activeQuery?.handleDataRow(msg)
   }
 
   _handlePortalSuspended(msg) {
     // delegate portalSuspended to active query
-    this.activeQuery.handlePortalSuspended(this.connection)
+    this.activeQuery?.handlePortalSuspended(this.connection)
   }
 
   _handleEmptyQuery(msg) {
     // delegate emptyQuery to active query
-    this.activeQuery.handleEmptyQuery(this.connection)
+    this.activeQuery?.handleEmptyQuery(this.connection)
   }
 
   _handleCommandComplete(msg) {
     // delegate commandComplete to active query
-    this.activeQuery.handleCommandComplete(msg, this.connection)
+    this.activeQuery?.handleCommandComplete(msg, this.connection)
   }
 
   _handleParseComplete(msg) {
@@ -391,11 +391,11 @@ class Client extends EventEmitter {
   }
 
   _handleCopyInResponse(msg) {
-    this.activeQuery.handleCopyInResponse(this.connection)
+    this.activeQuery?.handleCopyInResponse(this.connection)
   }
 
   _handleCopyData(msg) {
-    this.activeQuery.handleCopyData(msg, this.connection)
+    this.activeQuery?.handleCopyData(msg, this.connection)
   }
 
   _handleNotification(msg) {

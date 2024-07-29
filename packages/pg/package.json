@@ -1,6 +1,6 @@
 {
   "name": "so-pg",
-  "version": "8.12.1",
+  "version": "8.12.2",
   "description": "PostgreSQL client - pure javascript & libpq with the same API",
   "keywords": [
     "database",
